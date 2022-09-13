@@ -8,7 +8,7 @@ public class Employee {
     private String name;
     private String surName;
     private String middleName;
-    //private String fullName = surName + name + middleName;
+    private String fullName;
     private int department;
     private double salary;
     private int id;
@@ -24,6 +24,7 @@ public class Employee {
         this.middleName = middleName;
         this.department = department;
         this.salary = salary;
+        this.fullName = surName + " " + name + " " + middleName;
     }
 
     public void setSurName(String surName) {
@@ -36,6 +37,14 @@ public class Employee {
 
     public void setMiddleName(String middleName) {
         this.middleName = middleName;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     public void setDepartment(int department) {
